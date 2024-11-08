@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #3498db); /* Gradient background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.atm-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.atm-container:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2); /* Slight increase in shadow for hover effect */
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3498db; /* Main blue color */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.form-container, .actions-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-card, .user-card {
+    width: 100%;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.form-card:hover, .user-card:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15); /* Hover effect */
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #f2f2f2;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+    background-color: #e9f5fe;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #3498db; /* Blue button */
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+button:focus {
+    outline: none;
+}
+
+.actions-container {
+    display: none;
+    width: 100%;
+}
+
+.action-buttons button {
+    width: 48%;
+    margin: 10px 1%;
+    padding: 15px;
+    background-color: #f39c12; /* Golden color for action buttons */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background-color: #e67e22; /* Darker golden color on hover */
+}
+
+#balance-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #f39c12; /* Golden color for balance info */
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .atm-container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    input {
+        padding: 10px;
+    }
+
+    .action-buttons button {
+        font-size: 1rem;
+    }
+}

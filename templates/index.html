@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Simulation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="atm-container">
+        <header>
+            <h1>ATM Simulation</h1>
+        </header>
+
+        <!-- Account Creation Form -->
+        <div id="atm-operations" class="form-container">
+            <div class="form-card">
+                <h2>Create Account</h2>
+                <input type="text" id="account_number" placeholder="Account Number" required>
+                <input type="password" id="pin" placeholder="PIN" required>
+                <button onclick="createAccount()">Create Account</button>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-section" class="form-container">
+            <div class="form-card">
+                <h2>Login</h2>
+                <input type="text" id="login_account_number" placeholder="Account Number" required>
+                <input type="password" id="login_pin" placeholder="PIN" required>
+                <button onclick="login()">Login</button>
+                <p id="login-message"></p>
+            </div>
+        </div>
+
+        <!-- User Actions (After Login) -->
+        <div id="user-actions" class="actions-container">
+            <div class="user-card">
+                <h2>Welcome, <span id="account-display"></span></h2>
+                <div class="action-buttons">
+                    <button onclick="checkBalance()">Check Balance</button>
+                    <button onclick="depositMoney()">Deposit</button>
+                    <button onclick="withdrawMoney()">Withdraw</button>
+                    <button onclick="changePin()">Change PIN</button>
+                    <button onclick="logout()">Logout</button>
+                </div>
+                <p id="balance-message"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
